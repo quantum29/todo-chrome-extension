@@ -1,7 +1,11 @@
+// background.js
+
+// Initialize blockedWebsites list on installation
 chrome.runtime.onInstalled.addListener(function () {
   chrome.storage.sync.set({ blockedWebsites: [] })
 })
 
+// Listen for messages from the popup script
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   if (message.action === 'block') {
     chrome.storage.sync.get('blockedWebsites', function (data) {
