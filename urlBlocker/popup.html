@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URL Blocker</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>URL Blocker</h1>
+  <form id="block-form">
+    <label for="url">Enter URL to Block:</label>
+    <input type="url" id="url" required>
+    <button type="submit">Block</button>
+  </form>
+  <form id="unblock-form">
+    <label for="unblock-url">Enter URL to Unblock:</label>
+    <input type="url" id="unblock-url" required>
+    <button type="submit">Unblock</button>
+  </form>
+  <h2>Blocked Websites:</h2>
+  <ul id="blocked-list"></ul>
+  <script src="popup.js"></script>
+</body>
+</html>
